@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+:root {
+  --sb-width-desktop: 240px;
+  --sb-width: var(--sb-width-desktop);
+}
+@media (max-width: 767px) {
+  :root { --sb-width: 0px; }
+}
+
+:root {
+  --card: #f8f5f0;
+  --ring: #2e7d32;
+  --input: #e0d6c9;
+  --muted: #f0e9e0;
+  --accent: #c8e6c9;
+  --border: #e0d6c9;
+  --radius: 0.5rem;
+  --chart-1: #4caf50;
+  --chart-2: #388e3c;
+  --chart-3: #2e7d32;
+  --chart-4: #1b5e20;
+  --chart-5: #0a1f0c;
+  --popover: #f8f5f0;
+  --primary: #2e7d32;
+  --sidebar: #f0e9e0;
+  --font-mono: 'Source Code Pro', monospace;
+  --font-sans: 'Epilogue', 'Inter', sans-serif;
+  --secondary: #e8f5e9;
+  --background: #f8f5f0;
+  --font-serif: 'Merriweather', serif;
+  --foreground: #3e2723;
+  --destructive: #c62828;
+  --sidebar-ring: #2e7d32;
+  --sidebar-accent: #c8e6c9;
+  --sidebar-border: #e0d6c9;
+  --card-foreground: #3e2723;
+  --card-image-bg: #e8ece6;
+  --sidebar-primary: #2e7d32;
+  --muted-foreground: #6d4c41;
+  --accent-foreground: #1b5e20;
+  --popover-foreground: #3e2723;
+  --primary-foreground: #ffffff;
+  --sidebar-foreground: #3e2723;
+  --secondary-foreground: #1b5e20;
+  --destructive-foreground: #ffffff;
+  --sidebar-accent-foreground: #1b5e20;
+  --sidebar-primary-foreground: #ffffff;
+}
+
+/* ── Dark theme (active — applied via class on html/body in main.jsx or forced here) ── */
+html {
+  color-scheme: dark;
+}
+
+body {
+  --card: #1a1a22;
+  --ring: #34d399;
+  --input: #1f1f28;
+  --muted: #16161d;
+  --accent: #262630;
+  --border: rgba(255,255,255,0.08);
+  --radius: 0.5rem;
+  --popover: #1a1a22;
+  --primary: #34d399;
+  --sidebar: #0a0a0f;
+  --secondary: #1f1f28;
+  --background: #0a0a0f;
+  --foreground: #f4f4f5;
+  --destructive: #ef4444;
+  --sidebar-ring: #34d399;
+  --sidebar-accent: #262630;
+  --sidebar-border: rgba(255,255,255,0.08);
+  --card-foreground: #f4f4f5;
+  --card-image-bg: #11111a;
+  --sidebar-primary: #34d399;
+  --muted-foreground: #9a9aa6;
+  --accent-foreground: #f4f4f5;
+  --popover-foreground: #f4f4f5;
+  --primary-foreground: #04130c;
+  --sidebar-foreground: #f4f4f5;
+  --secondary-foreground: #d4d4dc;
+  --destructive-foreground: #f4f4f5;
+  --sidebar-accent-foreground: #f4f4f5;
+  --sidebar-primary-foreground: #04130c;
+}
+
+@theme inline {
+  --color-card: var(--card);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --color-popover: var(--popover);
+  --color-primary: var(--primary);
+  --color-sidebar: var(--sidebar);
+  --color-secondary: var(--secondary);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-destructive: var(--destructive);
+  --color-card-foreground: var(--card-foreground);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary-foreground: var(--secondary-foreground);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  /* Reserve equal gutter space on both sides so scrollbar never shifts layout */
+  scrollbar-gutter: stable both-edges;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Anton', sans-serif;
+  line-height: 1.1;
+  letter-spacing: 0.01em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
