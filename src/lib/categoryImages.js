@@ -78,16 +78,16 @@ export function getCategoryImage(category, seed) {
 // Curated showcase used by the landing-page marquee — one image per
 // category so the strip reads like a "tour" of what the site sells.
 export const HERO_MARQUEE_IMAGES = [
-  CATEGORY_IMAGES.watches[0],
-  CATEGORY_IMAGES.fragrance[0],
-  CATEGORY_IMAGES.sports[0],
-  CATEGORY_IMAGES.bags[0],
-  CATEGORY_IMAGES.accessories[1],
-  CATEGORY_IMAGES.clothing[1],
-  CATEGORY_IMAGES.electronics[0],
-  CATEGORY_IMAGES.fragrance[1],
-  CATEGORY_IMAGES.watches[2],
-  CATEGORY_IMAGES.bags[1],
-  CATEGORY_IMAGES.sports[1],
-  CATEGORY_IMAGES.accessories[2],
+  '/Products_images/clothes/WhatsApp Image 2026-04-25 at 2.48.17 AM (1).jpeg',
+  '/Products_images/cologne/WhatsApp Image 2026-04-25 at 2.38.15 AM (1).jpeg',
+  '/Products_images/jewelry/WhatsApp Image 2026-04-25 at 3.00.08 AM (1).jpeg',
+  '/Products_images/shoes/WhatsApp Image 2026-04-25 at 2.11.07 AM (1).jpeg',
+  '/Products_images/sunglasses/WhatsApp Image 2026-04-25 at 2.25.11 AM (1).jpeg',
+  '/Products_images/watches/WhatsApp Image 2026-04-25 at 2.58.47 AM (1).jpeg',
+  '/Products_images/clothes/WhatsApp Image 2026-04-25 at 2.48.17 AM (2).jpeg',
+  '/Products_images/cologne/WhatsApp Image 2026-04-25 at 2.38.15 AM (2).jpeg',
+  '/Products_images/jewelry/WhatsApp Image 2026-04-25 at 3.00.08 AM (2).jpeg',
+  '/Products_images/shoes/WhatsApp Image 2026-04-25 at 2.11.07 AM (2).jpeg',
+  '/Products_images/sunglasses/WhatsApp Image 2026-04-25 at 2.25.11 AM (2).jpeg',
+  '/Products_images/watches/WhatsApp Image 2026-04-25 at 2.58.47 AM (10).jpeg',
 ];
