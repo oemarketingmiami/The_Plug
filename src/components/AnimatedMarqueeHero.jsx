@@ -11,7 +11,7 @@ function ActionButton({ children, onClick }) {
       onClick={onClick}
       whileHover={{ scale: 1.04 }}
       whileTap={{ scale: 0.96 }}
-      className="mt-10 md:mt-14 font-['Anton'] tracking-[0.15em] text-sm uppercase rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+      className="mt-16 md:mt-20 font-['Anton'] tracking-[0.15em] text-sm uppercase rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
       style={{
         padding: '0.85rem 2rem',
         background: 'var(--primary)',
@@ -102,7 +102,7 @@ export function AnimatedMarqueeHero({
           animate="show"
           variants={FADE_IN}
           transition={{ delay: 0.45 }}
-          className="mt-8 md:mt-10 max-w-xl"
+          className="mt-12 md:mt-16 max-w-xl"
           style={{
             color: 'var(--muted-foreground)',
             fontSize: 'clamp(0.95rem, 1.4vw, 1.1rem)',
