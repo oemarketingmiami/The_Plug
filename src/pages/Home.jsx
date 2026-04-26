@@ -58,7 +58,7 @@ export default function Home() {
       />
 
       {/* ── Product Grid (filtered via sidebar Categories) ── */}
-      <div id="vendors" style={{ ...CONTAINER, paddingTop: 'clamp(2rem, 4vw, 3.5rem)', paddingBottom: '6rem' }}>
+      <div id="vendors" style={{ ...CONTAINER, paddingTop: 'clamp(3rem, 6vw, 5rem)', paddingBottom: '6rem' }}>
         <div style={{ display: 'flex', alignItems: 'baseline', justifyContent: 'space-between', marginBottom: '1.5rem', gap: '1rem', flexWrap: 'wrap' }}>
           <h2 className="font-['Anton']" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)', letterSpacing: '0.04em', color: 'var(--foreground)', margin: 0 }}>
             {activeTab === 'all' ? 'ALL VENDORS' : activeTab.toUpperCase()}

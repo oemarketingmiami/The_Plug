@@ -11,7 +11,7 @@ function ActionButton({ children, onClick }) {
       onClick={onClick}
       whileHover={{ scale: 1.04 }}
       whileTap={{ scale: 0.96 }}
-      className="mt-8 font-['Anton'] tracking-[0.15em] text-sm uppercase rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
+      className="mt-10 md:mt-14 font-['Anton'] tracking-[0.15em] text-sm uppercase rounded-full transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2"
       style={{
         padding: '0.85rem 2rem',
         background: 'var(--primary)',
@@ -41,12 +41,12 @@ export function AnimatedMarqueeHero({
     <section
       className={`relative w-full overflow-hidden flex flex-col items-center justify-start text-center px-4 ${className}`}
       style={{
-        minHeight: '100vh',
+        paddingBottom: 'clamp(180px, 38vh, 320px)',
         background: 'var(--background)',
         borderBottom: '1px solid var(--border)',
       }}
     >
-      <div className="relative z-10 flex flex-col items-center w-full max-w-4xl mx-auto pt-12 md:pt-20 pb-12">
+      <div className="relative z-10 flex flex-col items-center w-full max-w-4xl mx-auto pt-24 md:pt-28 pb-8 md:pb-12">
         <motion.div
           initial="hidden"
           animate="show"
@@ -102,7 +102,7 @@ export function AnimatedMarqueeHero({
           animate="show"
           variants={FADE_IN}
           transition={{ delay: 0.45 }}
-          className="mt-6 max-w-xl"
+          className="mt-8 md:mt-10 max-w-xl"
           style={{
             color: 'var(--muted-foreground)',
             fontSize: 'clamp(0.95rem, 1.4vw, 1.1rem)',

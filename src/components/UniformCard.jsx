@@ -251,22 +251,24 @@ export default function UniformCard({ product, onAddToCart }) {
 
       {/* ── Price / CTA bar ── */}
       <div
-        style={{ borderTop: '1px solid var(--border)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '0.625rem 1rem', gap: '0.5rem', background: 'var(--card)' }}
+        className="flex items-center justify-between gap-1 sm:gap-2 p-2 sm:px-4 sm:py-2.5"
+        style={{ borderTop: '1px solid var(--border)', background: 'var(--card)' }}
       >
-        <div style={{ display: 'flex', alignItems: 'baseline', gap: '0.375rem' }}>
+        <div className="flex items-baseline gap-1 sm:gap-1.5 min-w-0">
           {product.original_price && (
-            <span style={{ fontSize: '0.65rem', textDecoration: 'line-through', color: 'var(--muted-foreground)' }}>
+            <span className="text-[10px] sm:text-[0.65rem] truncate" style={{ textDecoration: 'line-through', color: 'var(--muted-foreground)' }}>
               ${Number(product.original_price).toFixed(2)}
             </span>
           )}
-          <span className="font-['Anton']" style={{ fontSize: '1rem', letterSpacing: '0.04em', color: 'var(--foreground)' }}>
+          <span className="font-['Anton'] text-[0.85rem] sm:text-[1rem] truncate" style={{ letterSpacing: '0.04em', color: 'var(--foreground)' }}>
             ${Number(product.sale_price).toFixed(2)}
           </span>
         </div>
 
         <button
-          onClick={() => onAddToCart(product)}
-          style={{ fontSize: '0.6rem', fontWeight: 900, letterSpacing: '0.1em', textTransform: 'uppercase', padding: '6px 12px', borderRadius: '6px', border: '1px solid var(--primary)', color: 'var(--primary)', background: 'transparent', cursor: 'pointer', whiteSpace: 'nowrap', flexShrink: 0, transition: 'background 0.15s, color 0.15s', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', lineHeight: 1 }}
+          onClick={(e) => { e.preventDefault(); onAddToCart(product); }}
+          className="px-2 py-1.5 sm:px-3 sm:py-1.5 text-[9px] sm:text-[10px]"
+          style={{ fontWeight: 900, letterSpacing: '0.1em', textTransform: 'uppercase', borderRadius: '6px', border: '1px solid var(--primary)', color: 'var(--primary)', background: 'transparent', cursor: 'pointer', whiteSpace: 'nowrap', flexShrink: 0, transition: 'background 0.15s, color 0.15s', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', lineHeight: 1 }}
           onMouseEnter={e => {
             e.currentTarget.style.background = 'var(--primary)';
             e.currentTarget.style.color = 'var(--primary-foreground)';
