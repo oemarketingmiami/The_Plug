@@ -9,8 +9,7 @@ const TABS = [
   { value: 'bags',        label: 'Bags' },
   { value: 'clothing',    label: 'Clothing' },
   { value: 'accessories', label: 'Accessories' },
-  { value: 'sports',      label: 'Sports' },
-  { value: 'toys',        label: 'Toys' },
+  { value: 'shoes',       label: 'Shoes' },
 ];
 
 export function CategoryTabs({ active, onChange, counts, total }) {

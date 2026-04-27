@@ -72,19 +72,9 @@ const CATEGORY_VISUALS = {
     keyword: 'sunglasses,jewelry,accessory',
     icon: (
       <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth={1.5}>
-        <circle cx="32" cy="32" r="8" />
-        <ellipse cx="32" cy="32" rx="28" ry="12" />
-      </svg>
-    ),
-  },
-  sports: {
-    gradient: 'linear-gradient(135deg, #ef4444 0%, #991b1b 55%, #450a0a 100%)',
-    accent: '#fecaca',
-    keyword: 'sneakers,sports,gear',
-    icon: (
-      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth={1.5}>
-        <circle cx="32" cy="32" r="22" />
-        <path d="M10 32h44M20 14l8 18M44 14l-8 18M20 50l8-18M44 50l-8-18" />
+        <circle cx="20" cy="32" r="10" />
+        <circle cx="44" cy="32" r="10" />
+        <path d="M30 32h4M10 30c-4-4-2-8-2-8s10-2 12 10M54 30c4-4 2-8 2-8s-10-2-12 10" />
       </svg>
     ),
   },
@@ -98,13 +88,14 @@ const CATEGORY_VISUALS = {
       </svg>
     ),
   },
-  toys: {
-    gradient: 'linear-gradient(135deg, #f43f5e 0%, #9f1239 55%, #4c0519 100%)',
-    accent: '#fecdd3',
-    keyword: 'toy,collectible,figure',
+  shoes: {
+    gradient: 'linear-gradient(135deg, #10b981 0%, #047857 55%, #022c22 100%)',
+    accent: '#d1fae5',
+    keyword: 'sneakers,shoes,kicks',
     icon: (
       <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" strokeWidth={1.5}>
-        <path d="M32 10l5 14h14l-11 9 4 14L32 38 20 47l4-14L13 24h14z" />
+        <path d="M12 40c0-10 16-16 24-16s24 6 24 16v4s-4 4-12 4-16-4-24-4-12 4-12-4v-4z" />
+        <path d="M20 28l4 12M32 24l4 16" />
       </svg>
     ),
   },

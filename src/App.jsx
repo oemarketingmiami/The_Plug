@@ -7,6 +7,9 @@ import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import Success from './pages/Success';
 import Admin from './pages/Admin';
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
+import Refund from './pages/Refund';
 import { FallingPattern } from './components/FallingPattern';
 
 export default function App() {
@@ -43,6 +46,9 @@ export default function App() {
               <Route path="/checkout" element={<Checkout />} />
               <Route path="/success" element={<Success />} />
               <Route path="/admin" element={<Admin />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/privacy" element={<Privacy />} />
+              <Route path="/refund" element={<Refund />} />
             </Routes>
           </main>
           <Footer />

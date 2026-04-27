@@ -1,6 +1,6 @@
 // Vite-bundled product imagery: enumerates every .jpeg under
 // /Products_images/<folder>/ at build time and groups by folder.
-const modules = import.meta.glob('/Products_images/**/*.jpeg', {
+const modules = import.meta.glob('/public/Products_images/**/*.jpeg', {
   eager: true,
   query: '?url',
   import: 'default',
@@ -12,7 +12,9 @@ for (const [path, url] of Object.entries(modules)) {
   if (!m) continue;
   const folder = m[1].toLowerCase();
   if (!FOLDERS[folder]) FOLDERS[folder] = [];
-  FOLDERS[folder].push(url);
+  // Strip /public from the URL if it exists, because the browser doesn't see it
+  const cleanUrl = url.replace(/^\/public/, '');
+  FOLDERS[folder].push(cleanUrl);
 }
 // Stable order so each vendor page renders the same 9 photos every time.
 Object.values(FOLDERS).forEach((arr) => arr.sort());
@@ -24,6 +26,7 @@ const KEYWORD_TO_FOLDER = [
   ['jewelry',            'jewelry'],
   ['necklace',           'jewelry'],
   ['ring',               'jewelry'],
+  ['jordan',             'shoes'],
   ['sneaker',            'shoes'],
   ['shoe',               'shoes'],
   ['cologne',            'cologne'],
@@ -35,6 +38,9 @@ const KEYWORD_TO_FOLDER = [
   ['hoodie',             'clothes'],
   ['shirt',              'clothes'],
   ['clothing',           'clothes'],
+  ['dyson',              'electronics'],
+  ['pods',               'electronics'],
+  ['electronic',         'electronics'],
 ];
 
 const CATEGORY_TO_FOLDER = {
@@ -42,7 +48,8 @@ const CATEGORY_TO_FOLDER = {
   fragrance:   'cologne',
   watches:     'watches',
   accessories: 'sunglasses',
-  sports:      'shoes',
+  shoes:       'shoes',
+  electronics: 'electronics',
   jewelry:     'jewelry',
 };
 

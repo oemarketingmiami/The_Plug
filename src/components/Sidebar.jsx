@@ -12,8 +12,7 @@ const CATEGORY_LABELS = [
   { value: 'bags',        label: 'Bags' },
   { value: 'clothing',    label: 'Clothing' },
   { value: 'accessories', label: 'Accessories' },
-  { value: 'sports',      label: 'Sports' },
-  { value: 'toys',        label: 'Toys' },
+  { value: 'shoes',       label: 'Shoes' },
 ];
 
 const ADMIN_VIEWS = [
